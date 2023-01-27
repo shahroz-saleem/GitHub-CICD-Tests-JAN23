@@ -1,7 +1,7 @@
 
 name: Multiple-Jobs-T1
 on:
-  workflow_dispath:
+  workflow_dispatch:
 
 jobs:
   J1:
