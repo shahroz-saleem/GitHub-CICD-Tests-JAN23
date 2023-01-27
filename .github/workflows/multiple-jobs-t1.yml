@@ -14,8 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         
-#       - name: INSTALL JQUERY
-#         run: npm install jqeury
+      - name: INSTALL cross-env
+        run: npm install cross-env
 
       - name: Check package
         run: cross-env
