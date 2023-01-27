@@ -9,12 +9,25 @@ env:
 
 jobs:
   J1:
-    runs-on: ubuntu-latest
+    runs-on: nodejs
     steps:
       - name: Prints J1 text
         run: echo 'Job 01'
         
-      - name: Prints J1 Env
+      - name: Prints J1 log
+        run: node --version
+      
+      - name: Prints J1 Env1
+        env: 
+          aa: 22
+        run: echo $aa
+        
+      - name: Prints J1 Env2
+        run: |
+          env
+          echo $abc
+        
+      - name: Prints J1 Env3
         run: echo $abc
   J2:
     runs-on: ubuntu-latest
