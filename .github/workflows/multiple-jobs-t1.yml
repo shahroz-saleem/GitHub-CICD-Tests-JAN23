@@ -9,3 +9,14 @@ jobs:
     steps:
       - name: Prints J1 text
         run: echo 'Job 01'
+  J2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prints J2 text
+        run: echo 'Job 02'
+  J3:
+    runs-on: ubuntu-latest
+    needs: [J1, J2]
+    steps:
+      - name: Prints J3 text
+        run: echo 'Job 03'
