@@ -7,5 +7,5 @@ jobs:
   J1:
     runs-on: ubuntu-latest
     steps:
-      name: Prints J1 text
-      run: echo 'Job 01'
+      - name: Prints J1 text
+        run: echo 'Job 01'
