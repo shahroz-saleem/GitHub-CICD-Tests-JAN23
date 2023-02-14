@@ -1,0 +1,12 @@
+
+name: GitHub-Context
+
+on:
+  workflow_dispatch:
+
+jobs:
+  J1:
+    runs-on: ubuntu-latest
+    steps:      
+      - name: Prints J1 Env
+        run: echo ${github}
