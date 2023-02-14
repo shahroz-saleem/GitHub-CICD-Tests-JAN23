@@ -5,13 +5,22 @@ on:
   pull_request:
         types: [opened, reopened, labeled, synchronize]
   workflow_dispatch:
+  
+env:
+    readyForDevelopBranch: github.base_ref == 'develop' && github.event.pull_request.draft == false && github.event.pull_request.state == 'open'
 
 jobs:
-  J1:
+#   J1:
+#     runs-on: ubuntu-latest
+#     steps:      
+#       - name: Prints J1 Env
+#         env:
+#           GITHUB_CONTEXT: ${{ toJson(github) }}
+#         run: |
+#           echo "$GITHUB_CONTEXT"
+  J2:
     runs-on: ubuntu-latest
     steps:      
-      - name: Prints J1 Env
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+      - name: Prints J2 Env
         run: |
-          echo "$GITHUB_CONTEXT"
+          echo "$readyForDevelopBranch"
