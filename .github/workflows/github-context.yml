@@ -29,4 +29,29 @@ jobs:
         run: echo "I am 2"
           
       - name: Prints J2 3
+        if: true
         run: echo "I am 3"
+        
+      - name: Prints J2 4
+        if: false
+        run: echo "I am 4"
+        
+      - name: Prints J2 5
+        if: 'true'
+        run: echo "I am 5"
+        
+      - name: Prints J2 6
+        if: 'false'
+        run: echo "I am 6"
+        
+      - name: Prints J2 7
+        if: ${{ env.readyForDevelopBranch && true }} == 'false'
+        run: echo "I am 7"
+        
+      - name: Prints J2 8
+        if: ${{ env.readyForDevelopBranch && true }} == 'true'
+        run: echo "I am 8"
+        
+      - name: Prints J2 9
+        if: $readyForDevelopBranch
+        run: echo "I am 9 $readyForDevelopBranch"
