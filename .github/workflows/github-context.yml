@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - name: Prints J1 Env
-        run: echo ${github}
+        run: echo ${{github}}
