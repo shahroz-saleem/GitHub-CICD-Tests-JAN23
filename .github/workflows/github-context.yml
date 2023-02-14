@@ -51,7 +51,3 @@ jobs:
       - name: Prints J2 8
         if: ${{ env.readyForDevelopBranch && true }} == 'true'
         run: echo "I am 8"
-        
-      - name: Prints J2 9
-        if: $readyForDevelopBranch
-        run: echo "I am 9 $readyForDevelopBranch"
