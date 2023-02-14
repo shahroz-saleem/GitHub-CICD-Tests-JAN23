@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   
 env:
-    readyForDevelopBranch: ${{true || github.base_ref == 'develop' && github.event.pull_request.draft == false && github.event.pull_request.state == 'open'}}
+    readyForDevelopBranch: ${{false || github.base_ref == 'develop' && github.event.pull_request.draft == false && github.event.pull_request.state == 'open'}}
 
 jobs:
 #   J1:
