@@ -9,4 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - name: Prints J1 Env
-        run: echo ${{ toJson(github) }}
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
