@@ -25,16 +25,16 @@ jobs:
         run: echo "$readyForDevelopBranch"
           
       - name: Prints J2 2
-        if: ${{ env.readyForDevelopBranch && true }}
+        if: ${{ env.readyForDevelopBranch == 'true' }} && true
         run: echo "I am 2"
           
       - name: Prints J2 3
         if: ${{ env.readyForDevelopBranch == 'false' }}
         run: echo "I am 3"
         
-      - name: Prints J2 3
+      - name: Prints J2 4
         if: ${{ env.readyForDevelopBranch == false }}
-        run: echo "I am 3"
+        run: echo "I am 4"
         
       - name: Prints J2 5
         if: 'true'
