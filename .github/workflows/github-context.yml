@@ -3,7 +3,7 @@ name: GitHub-Context
 
 on:
   pull_request:
-        types: [opened, reopened, labeled, synchronize]
+        types: [opened, reopened, labeled, synchronize, ready_for_review]
   workflow_dispatch:
   
 env:
